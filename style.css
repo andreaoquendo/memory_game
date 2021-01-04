@@ -1,0 +1,280 @@
+/**---------------- R E S E T ----------------------/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------- A C T U A L   C O D E ---------------------*/
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+}
+
+body{
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	background-color: #fcf9f9;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+h1{
+	font-size: 40px;
+	line-height: 42px;
+	font-weight: 500;
+}
+
+.level{
+	text-align: center;
+	margin-top: 300px;
+}
+
+.level p{
+	margin:50px 0 10px 0;
+}
+
+.level ul{
+	margin-top: 25px;
+}
+
+.level ul li{
+	display: inline-block;
+	cursor: pointer;
+	width:180px;
+	height: 50px;
+	color:white;
+	line-height: 50px;
+	margin-right: 3px;
+	border-radius: 25px;
+	background: rgb(89,89,235);
+	background: linear-gradient(270deg, rgba(89,89,235,1) 0%, rgba(0,212,255,1) 100%);
+	box-shadow: 5px 3px 5px gainsboro;
+	font-weight: 500px;
+}
+
+.level ul li:hover{
+	opacity:0.7;
+}
+/*-------- game ----*/
+.body-cards{
+	height:100%;
+}
+
+.game{
+	height:100%;
+}
+
+.top-bar{
+	position: relative;
+	height:100px;
+	width:100%;
+	background-color: white;
+	border-bottom: solid 2px #f2f1f1;
+}
+
+.rest{
+	width:100%;
+	height: 100%;
+	min-height: 500px;
+	padding: auto;
+}
+
+#cards-display{
+	max-width: 980px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+}
+
+#cards-display div{
+	width:130px;
+	height: 130px;
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.card{
+	width:130px;
+	height: 130px;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 130px;
+	font-size: 40px;
+	box-shadow: 3px 3px 10px lightblue;
+	transition: 0.3s;
+	background: rgb(89,89,235);
+	background: linear-gradient(270deg, rgba(89,89,235,1) 0%, rgba(0,212,255,1) 100%);
+	cursor: pointer;
+}
+.card .tarjeta__contenido{
+	color: transparent;	
+}
+
+.card.descubierta .tarjeta__contenido{
+	color:black;
+}
+
+.card.descubierta{
+	background:white;
+	color: black;
+	transform: rotateY(-180deg);
+}
+
+.card.listo{
+	opacity:0;
+}
+
+.tarjeta__contenido{
+	transition: transform 0.3s;
+	transition-delay: color 0.3s;
+	transform: rotateY(-180deg);
+}
+
+
+#tiempo{
+	width:160px;
+	height:100px;
+	position: absolute;
+	left:30px;
+	padding-top: 10px;
+}
+
+.name-att{
+	color:#d4d0d0;
+	line-height: 25px;
+	font-weight: 500;
+	font-size:18px;
+	vertical-align: top;
+}
+
+.numero{
+	font-size:60px;
+	font-weight: 600;
+	vertical-align: bottom;
+	color:#74f4e8;
+}
+
+#contador{
+	width:160px;
+	height:100px;
+	position: absolute;
+	left:250px;
+	padding-top: 10px;
+}
+
+#level{
+	min-width:160px;
+	height:100px;
+	position: absolute;
+	right:50px;
+	padding-top: 10px;
+	text-align: end;
+}
+
+.mensaje{
+	width:530px;
+	height:300px;
+	padding: 30px;
+	margin: 200px auto 0;
+	background: rgb(98,170,246);
+background: linear-gradient(270deg, rgba(98,170,246,1) 0%, rgba(116,244,232,1) 100%);
+	border-radius: 20px;
+	text-align: center;
+}
+
+.mensaje h1{
+	margin-top: 30px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-size:30px;
+	color: white;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 5px gray;
+}
+
+.mensaje p{
+	text-align: center;
+	color: white;
+}
+
+.intentar{
+	text-align: center;
+	display: block;
+	width:150px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: teal;
+	line-height: 40px;
+	border-radius: 20px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	color: white;
+	cursor:pointer
+}
+.intentar:hover, .volver:hover{
+	opacity:0.7;
+}
+
+.volver{
+	line-height: 30px;
+	color:teal;
+	cursor: pointer;
+}
+
+#diff{
+	text-transform: uppercase;
+}
