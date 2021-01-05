@@ -1,4 +1,4 @@
-var jugadas = 0;
+
 function cuentaJugadas(){
     jugadas++;
     var jugadasTexto = (jugadas < 10) ? '0'+jugadas : jugadas;

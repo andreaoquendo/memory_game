@@ -8,8 +8,8 @@
     <title>Memory Game</title>
 </head>
 <body>
-    <div class="body-cards">
-        <div class="level" style="display: block">
+        <!-- Pagina inicial -->
+        <div class="homepage" style="display: block">
             <h1>🥳 Let's play the Memory game! 🥳</h1>
             <p>Please, select level.</p>
             <ul>
@@ -19,7 +19,8 @@
                 <li class="nivel" data-difficulty="extreme">EXTREME</li>
             </ul>
         </div>
-        <div class="game" style="display: none">  
+        <!-- Pagina de Juego -->
+        <div class="gamepage" style="display: none">  
             <div class="top-bar" >
                 <div id="tiempo">
                     <span class="name-att">TIEMPO</span>
@@ -31,14 +32,14 @@
                 </div>
                 <div id="level">
                     <span class="name-att">NIVEL</span>
-                    <br><span id="diff" class="numero">EASY</span>
+                    <br><span id="nombre-nivel" class="numero">EASY</span>
                 </div>
             </div>
-            <div class="rest" style="display: block">
+            <div class="cuerpo-juego" style="display: block">
                 <div id="cards-display">
                 </div>
             </div>
-            <div class="rest" style="display: none">
+            <div class="cuerpo-juego" style="display: none">
                 <div class="mensaje" id="fail" style="display: none">
                     <h1>
                         😭 Que pena! Has perdido! 😭
@@ -59,8 +60,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
     <audio
         src="sonidos/carta.mp3"
         class="sonido"
@@ -73,9 +72,16 @@
         id="sonido-acierto"
         preload="auto"
     ></audio>
-<script src="iniciar.js"></script>
-<script src="reparte_tarjetas.js"></script>
-<script src="cronometro.js"></script>
-<script src="contador.js"></script>
+
+<script src="js/variables-gobales.js"></script>
+<script src="js/cronometro.js"></script>
+<script src="js/contador.js"></script>
+<script src="js/gana-pierde.js"></script>
+<script src="js/reparte_tarjetas.js"></script>
+<script src="js/entra-sal.js"></script>
+<script src="js/acierto-error.js"></script>
+<script src="js/empezar-reempezar.js"></script>
+<script src="js/prepara-nivel.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
